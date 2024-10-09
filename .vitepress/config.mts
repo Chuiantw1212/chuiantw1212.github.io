@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "My Awesome Project",
+  title: "My Awesome Project 2024/10/09",
   description: "A VitePress Site",
   head: [
     ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
