@@ -1,8 +1,10 @@
 import { defineConfig } from 'vitepress'
 
+import { SearchPlugin } from "vitepress-plugin-search";
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "My Awesome Project 2024/10/09",
+  title: "My Awesome Project",
   description: "A VitePress Site",
   head: [
     ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
@@ -42,5 +44,28 @@ export default defineConfig({
     footer: {
       message: 'Tutored by <a href="https://econ-sense.com/about.html" target="_blank">EN Chu</a>',
     }
-  }
+  },
+  // EN Chu建議的網站設定
+  /**
+   * Customization
+   */
+  markdown: {
+    image: {
+      lazyLoading: true
+    }
+  },
+  vite: {
+    plugins: [
+      SearchPlugin({
+        encode: false,
+        tokenize: "full",
+        buttonLabel: "搜尋",
+        placeholder: "搜尋關鍵字"
+      }) as any
+    ]
+  },
+  /** Experimental */
+  sitemap: {
+    hostname: 'https://econ-sense.com'
+  },
 })
