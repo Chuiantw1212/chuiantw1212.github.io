@@ -38,7 +38,7 @@ export default defineConfig({
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      { icon: 'github', link: 'https://github.com/Chuiantw1212/chuiantw1212.github.io' }
     ],
 
     footer: {
